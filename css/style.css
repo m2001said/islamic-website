@@ -235,13 +235,15 @@ button {
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
+  height: 90vh;
 }
 .hero-background {
   background-image: url(/images/hero-section2.jpg);
+  background-color: var(--color-primary);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100%;
+  height: 90vh;
   width: 100%;
   position: absolute;
   top: 0;
@@ -390,7 +392,8 @@ button {
   padding: 2rem 0;
   /* background: red; */
 }
-.slide-content {
+.slide-content,
+.slide-content2 {
   margin: 0 2rem;
   padding: 0 1rem 2rem 1rem;
   overflow: hidden;
@@ -445,4 +448,11 @@ audio::-webkit-media-controls-panel {
 .new-lessons .card-content-bottom {
   /* justify-content: space-around; */
   gap: 1rem;
+}
+.swiper-pagination2 {
+  position: absolute;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
 }

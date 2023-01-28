@@ -29,7 +29,7 @@
   .nav-list {
     overflow: hidden;
     position: absolute;
-    top: 50px;
+    top: 47px;
     left: 0;
     width: 300px;
     height: 0;
@@ -39,15 +39,27 @@
     transition: all 0.3s;
   }
   .nav-list.active {
-    height: 65vh;
+    height: 420px;
   }
   .nav-list.active ul {
     opacity: 1;
   }
+  .nav-list.active ul li {
+    width: 100%;
+    padding-bottom: 1.2rem;
+    border-bottom: solid 1px var(--color-primary-light);
+  }
+
+  .nav-list.active ul li:hover a {
+    box-shadow: inset 0 0 0 0 var(--color-primary-light);
+    color: var(--color-primary-light);
+
+    padding-right: 2rem;
+  }
   .nav-list ul {
     flex-direction: column;
     gap: 2rem;
-    padding: 3rem 0;
+    padding-top: 1.6rem;
     opacity: 0;
   }
 
@@ -98,8 +110,9 @@
 @media (max-width: 430px) {
   section {
     padding: 2rem 1rem;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 2rem;
   }
+
   .link {
     min-width: 400px;
     flex-direction: row;
@@ -113,8 +126,9 @@
     flex: 3;
     font-size: 1.2rem;
   }
-  /* .lectures {
-    padding: 0;
+  /* .lessons,
+  .new-lessons {
+    padding: 3rem 0.5rem;
   } */
   .card-img {
     height: 100px;
@@ -136,5 +150,8 @@
   }
   .card-content-bottom {
     align-items: flex-start;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
   }
 }
