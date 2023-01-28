@@ -24,92 +24,54 @@ const changeHero = () => {
 setInterval(changeHero, 3000);
 
 // -----------------swiper----------
-var swiper = new Swiper(".slide-content", {
-  slidesPerView: 2,
-  spaceBetween: 25,
-  loop: true,
-  centerSlide: "true",
-  fade: "true",
-  grabCursor: "true",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    // dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+const swiperHandler = (paginationElement) => {
+  return {
+    slidesPerView: 2,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: "true",
+    fade: "true",
+    grabCursor: "true",
+    pagination: {
+      el: paginationElement,
+      clickable: true,
+      // dynamicBullets: true,
     },
-    700: {
-      slidesPerView: 2,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    1000: {
-      slidesPerView: 3,
-    },
-  },
-});
-var swiper = new Swiper(".slide-content2", {
-  slidesPerView: 2,
-  spaceBetween: 25,
-  loop: true,
-  centerSlide: "true",
-  fade: "true",
-  grabCursor: "true",
-  pagination: {
-    el: ".swiper-pagination2",
-    clickable: true,
-    // dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      700: {
+        slidesPerView: 2,
+      },
+      1000: {
+        slidesPerView: 3,
+      },
     },
-    700: {
-      slidesPerView: 2,
-    },
-    1000: {
-      slidesPerView: 3,
-    },
-  },
-});
+  };
+};
+// for lessons
+var swiper = new Swiper(".slide-content", swiperHandler(".swiper-pagination"));
 
-// const swiperHandler = () => {
-//   return {
-//     slidesPerView: 2,
-//     spaceBetween: 25,
-//     loop: true,
-//     centerSlide: "true",
-//     fade: "true",
-//     grabCursor: "true",
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//       // dynamicBullets: true,
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
+//fon new lessons
+var swiper = new Swiper(
+  ".slide-content-new-lessons",
+  swiperHandler(".swiper-pagination-new-lessons")
+);
 
-//     breakpoints: {
-//       0: {
-//         slidesPerView: 1,
-//       },
-//       700: {
-//         slidesPerView: 2,
-//       },
-//     },
-//   };
-// };
-// var swiper = new Swiper(".slide-content", swiperHandler());
-// var swiper = new Swiper(".slide-content", swiperHandler());
+//fon new lectures
+var swiper = new Swiper(
+  ".slide-content-lectures",
+  swiperHandler(".swiper-pagination-lectures")
+);
+//fon new lectures
+var swiper = new Swiper(
+  ".slide-content-new-lectures",
+  swiperHandler(".swiper-pagination-new-lectures")
+);
