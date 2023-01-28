@@ -114,22 +114,18 @@
   }
 
   .link {
-    min-width: 400px;
-    flex-direction: row;
-    padding: 1rem 3rem 1rem 1rem;
+    min-width: 200px;
+    padding: 2rem 1rem 0;
+    /* padding: 1rem 3rem 1rem 1rem; */
   }
   .link .bi {
-    flex: 1;
     font-size: 3rem;
   }
   .link p {
-    flex: 3;
     font-size: 1.2rem;
+    height: 50px;
   }
-  /* .lessons,
-  .new-lessons {
-    padding: 3rem 0.5rem;
-  } */
+
   .card-img {
     height: 100px;
     width: 100px;
@@ -151,7 +147,19 @@
   .card-content-bottom {
     align-items: flex-start;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper-button-next::before,
+  .swiper-button-next::after,
+  .swiper-button-prev::before,
+  .swiper-button-prev::after {
+    font-size: 1rem;
+  }
+  .slide-content,
+  .slide-content2 {
+    margin: 0 1.5rem;
+    padding: 0 0 2rem 0;
+  }
+  .lessons,
+  .new-lessons {
+    padding: 2rem 0;
   }
 }
