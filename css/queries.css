@@ -140,6 +140,11 @@
   .swiper-slide-gallery img {
     width: 70%;
   }
+  .footer {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
 }
 /**************************/
 /* BELOW 540  */

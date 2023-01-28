@@ -762,6 +762,7 @@ audio::-webkit-media-controls-panel {
 
 .live-content .title::before {
   width: 13rem;
+  background: var(--color-secondary);
 }
 
 .live-content .title {
@@ -779,3 +780,22 @@ audio::-webkit-media-controls-panel {
 /**************************/
 /* footer */
 /**************************/
+.footer {
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 3px -3px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.footer .social {
+  margin-top: 0;
+}
+.footer .social .bi {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+.footer .social .bi:hover {
+  color: var(--color-secondary);
+  background: var(--color-white);
+}
+.footer h4 {
+  color: var(--color-primary);
+}
