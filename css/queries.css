@@ -157,6 +157,7 @@
   .slide-content2 {
     margin: 0 1.5rem;
     padding: 0 0 2rem 0;
+    overflow: visible;
   }
   .lessons,
   .new-lessons {
