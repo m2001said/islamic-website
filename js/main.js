@@ -48,6 +48,9 @@ var swiper = new Swiper(".slide-content", {
     700: {
       slidesPerView: 2,
     },
+    1000: {
+      slidesPerView: 3,
+    },
   },
 });
 var swiper = new Swiper(".slide-content2", {
@@ -73,6 +76,9 @@ var swiper = new Swiper(".slide-content2", {
     },
     700: {
       slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 3,
     },
   },
 });

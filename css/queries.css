@@ -101,7 +101,10 @@
     margin-bottom: 2rem;
   }
   .new-lessons .card {
-    height: 300px;
+    height: 250px;
+  }
+  .card-content-info p {
+    font-size: 0.8rem;
   }
 }
 /**************************/
@@ -130,9 +133,9 @@
     height: 100px;
     width: 100px;
   }
-  .card-content-info {
+  /* .card-content-info {
     flex-direction: column;
-  }
+  } */
 
   .card-content {
     /* justify-content: flex-start; */
