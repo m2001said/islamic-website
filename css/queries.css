@@ -261,5 +261,6 @@
   }
   .articles-container .go-all {
     /* align-self: flex-end; */
+    margin: 2rem auto 0 auto;
   }
 }
