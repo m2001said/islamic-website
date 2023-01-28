@@ -645,6 +645,7 @@ audio::-webkit-media-controls-panel {
   padding: 1rem 0;
   border-top: solid 1px var(--color-primary);
   border-bottom: solid 1px var(--color-primary);
+  font-size: 1.9rem;
 }
 
 .articles-items {
@@ -727,8 +728,9 @@ audio::-webkit-media-controls-panel {
 }
 
 .gallery-button {
-  background: var(--color-white);
-  padding: 8px;
+  /* background: var(--color-primary-light); */
+  color: var(--color-primary);
+  /* padding: 8px; */
   border-radius: 4px;
 }
 

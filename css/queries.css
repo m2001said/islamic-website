@@ -150,6 +150,28 @@
 /* BELOW 470px  */
 /**************************/
 @media (max-width: 470px) {
+  .articles-container h1,
+  .title {
+    font-size: 1.3rem;
+  }
+  .lessons .title::before {
+    width: 6rem;
+  }
+  .new-lessons .title::before {
+    width: 9rem;
+  }
+  .lectures .title::before {
+    width: 8rem;
+  }
+  .new-lectures .title::before {
+    width: 11rem;
+  }
+  .gallery .title::before {
+    width: 17rem;
+  }
+  .articles-container h1 {
+    margin-bottom: 1.5rem;
+  }
   section {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
@@ -217,7 +239,7 @@
   .slide-content-new-lectures {
     overflow: visible;
   }
-
+  .lectures,
   .lessons,
   .new-lessons,
   .new-lectures {
@@ -230,5 +252,14 @@
 
   .live-content-btns {
     gap: 2rem;
+  }
+  .go-all {
+    margin-left: 2rem;
+  }
+  .live-content-btns .go-all {
+    margin-left: 0rem;
+  }
+  .articles-container .go-all {
+    /* align-self: flex-end; */
   }
 }
