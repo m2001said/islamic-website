@@ -338,28 +338,30 @@ button {
   margin: 0;
   margin-bottom: 2rem;
   background: var(--color-primary-light);
-  white-space: nowrap;
+  /* white-space: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
-  /* overflow: auto; */
+  overflow-y: hidden; */
+  overflow: auto;
   /* gap: 5px; */
+  /* width: 100%; */
+  display: flex;
 }
 
 .link {
   gap: 2rem;
-  padding: 2rem 1rem;
-  min-width: 300px;
+  padding: 1.5rem 1rem;
+  min-width: 200px;
   border: solid 1px transparent;
 }
 
 .link .bi {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .link p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
-  height: 60px;
+  height: 40px;
 
   /* overflow-wrap: break-word; */
 }
