@@ -9,23 +9,50 @@ navButton.onclick = () => {
 };
 
 // -------background of hero section---------
+
 const changeHero = () => {
   const images = [
     'url("/images/hero-section1.jpg")',
     'url("/images/hero-section2.jpg")',
     'url("/images/hero-section3.jpg")',
   ];
-
   const heroSection = document.querySelector(".hero-background");
   const bg = images[Math.floor(Math.random() * images.length)];
   heroSection.style.backgroundImage = bg;
 };
 
-setInterval(changeHero, 3000);
+setInterval(changeHero, 4000);
+
+// -----------------sharing links of social media----------
+// sharing facebook
+// document.querySelector(".facebook").addEventListener("click", (e) => {
+//   e.preventDefault();
+//   var url = this.href;
+//   var shareUrl =
+//     "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+//   window.open(shareUrl, "Share on Facebook", "height=320,width=640");
+// });
+
+// const sharingLink = encodeURI(window.location.href);
+
+// const socialMessage = encodeURIComponent(
+//   "السلام عليكم ورحمة الله وبركاته ، وجدت هذا لعله ينفعك ان شاء الله"
+// );
+
+// const pageTitle = encodeURIComponent(
+//   document.querySelector("title").textContent
+// );
+
+// // sharing facebook
+// const facebook = document.querySelector(".facebook");
+// facebook.href = `https://www.facebook.com/share.php?u=${sharingLink}`;
+
+// const twitter = document.querySelector(".twitter");
+// twitter.href = `http://twitter.com/share?&url=${sharingLink}&text=${socialMessage}&hashtags=javascript,programming`;
 
 // -----------------swiper----------
 
-const swiperHandler = (paginationElement) => {
+const swiperHandler = (paginationElement, buttonNext, buttonPrev) => {
   return {
     slidesPerView: 2,
     spaceBetween: 25,
@@ -39,8 +66,8 @@ const swiperHandler = (paginationElement) => {
       // dynamicBullets: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: buttonNext,
+      prevEl: buttonPrev,
     },
 
     breakpoints: {
@@ -57,23 +84,52 @@ const swiperHandler = (paginationElement) => {
   };
 };
 // for lessons
-var swiper = new Swiper(".slide-content", swiperHandler(".swiper-pagination"));
+var swiper = new Swiper(
+  ".slide-content",
+  swiperHandler(
+    ".swiper-pagination",
+    ".lessons-button-next",
+    ".lessons-button-prev"
+  )
+);
 
 //fon new lessons
 var swiper = new Swiper(
   ".slide-content-new-lessons",
-  swiperHandler(".swiper-pagination-new-lessons")
+  swiperHandler(
+    ".swiper-pagination-new-lessons",
+    ".new-lessons-button-next",
+    ".new-lessons-button-prev"
+  )
 );
 
 //fon new lectures
 var swiper = new Swiper(
   ".slide-content-lectures",
-  swiperHandler(".swiper-pagination-lectures")
+  swiperHandler(
+    ".swiper-pagination-lectures",
+    ".lectures-button-next",
+    ".lectures-button-prev"
+  )
 );
+
 //fon new lectures
 var swiper = new Swiper(
   ".slide-content-new-lectures",
-  swiperHandler(".swiper-pagination-new-lectures")
+  swiperHandler(
+    ".swiper-pagination-new-lectures",
+    ".new-lectures-button-next",
+    ".new-lectures-button-prev"
+  )
+);
+//fon new speech
+var swiper = new Swiper(
+  ".slide-content-speech",
+  swiperHandler(
+    ".swiper-pagination-speech",
+    ".speech-button-next",
+    ".speech-button-prev"
+  )
 );
 
 // -------gallery-------------------------

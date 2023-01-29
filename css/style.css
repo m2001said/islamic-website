@@ -6,6 +6,7 @@
   --color-secondary-light: #d0c0b4;
   --color-secondary-thin: #beb5ad;
   --color-gray: #e7eaef;
+  --color-gray-dark: #959596;
   --color-white: #fff;
 }
 
@@ -338,12 +339,7 @@ button {
   margin: 0;
   margin-bottom: 2rem;
   background: var(--color-primary-light);
-  /* white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden; */
   overflow: auto;
-  /* gap: 5px; */
-  /* width: 100%; */
   display: flex;
 }
 
@@ -455,7 +451,8 @@ button {
 .slide-content,
 .slide-content-new-lessons,
 .slide-content-lectures,
-.slide-content-new-lectures {
+.slide-content-new-lectures,
+.slide-content-speech {
   margin: 0 2rem;
   padding: 0 1rem 2rem 1rem;
   overflow: hidden;
@@ -527,7 +524,8 @@ audio::-webkit-media-controls-panel {
 
 .swiper-pagination-new-lessons,
 .swiper-pagination-lectures,
-.swiper-pagination-new-lectures {
+.swiper-pagination-new-lectures,
+.swiper-pagination-speech {
   position: absolute;
   text-align: center;
   transition: 0.3s opacity;
@@ -575,9 +573,7 @@ audio::-webkit-media-controls-panel {
 .lectures .social .bi {
   background: var(--color-secondary);
   color: var(--color-white);
-}
-
-.swiper-pagination-lectures {
+  transition: all 0.3s;
 }
 
 .lectures .swiper-button-next:hover,
@@ -597,73 +593,94 @@ audio::-webkit-media-controls-panel {
 }
 
 /**************************/
+/* speech */
+/**************************/
+.speech {
+  background: var(--color-gray);
+  margin-bottom: 0;
+}
+
+.speech .social .bi {
+  background: var(--color-gray-dark);
+  color: var(--color-white);
+  transition: all 0.3s;
+}
+.speech .social .bi:hover {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.lectures .swiper-button-next:hover,
+.lectures .swiper-button-prev:hover {
+  color: var(--color-gray-dark);
+}
+/**************************/
 /* articles */
 /**************************/
-.articles {
-  background: var(--color-primary);
+/* .articles {
   color: var(--color-primary);
   padding-top: 100px;
   padding-bottom: 0;
-  /* overflow: hidden; */
-  /* z-index: -5; */
-}
-.articles-back {
-  /* gap: 30px; */
-}
-.articles-container {
+  background: var(--color-primary);
+} */
+/* z-index: -3; */
+
+.articles {
   max-width: 1200px;
   position: relative;
-  background: var(--color-secondary-thin);
-  width: 100%;
+  background: url(/images/articles-bg.jpg) #eaeaea;
   padding: 1rem 2rem 0 2rem;
-  box-shadow: 5px -3px 11px 0px rgba(0, 0, 0, 0.3);
-  /* position: relative; */
-  /* z-index: 2; */
+  box-shadow: 5px -9px 20px -3px rgb(0 0 0 / 30%);
+  margin: 7rem auto 2rem auto;
 }
-
-.articles-before1 {
-  max-width: 1200px;
-  width: 90%;
-  height: 130px;
-  background: red;
-  /* filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5)); */
-
-  clip-path: polygon(97% 40%, 97% 100%, 0% 100%);
-  margin-bottom: -90px;
-}
-.articles-before2 {
-  max-width: 1200px;
-  width: 100%;
-  height: 90px;
-  background: yellow;
-  /* box-shadow: 5px -3px 11px 0px rgba(0, 0, 0, 0.3); */
-  clip-path: polygon(97% 40%, 97% 100%, 0% 100%);
-  margin-bottom: -20px;
-  text-shadow: 0 0 10px black;
-}
-
-/* .articles-container::after {
-  content: "";
+.articles-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: red;
-  top: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  width: 5000px;
+  height: 500px;
+  z-index: -3;
+}
+.articles::before {
+  content: "";
+  width: 90%;
+  height: 100px;
+  background: url(/images/articles-bg.jpg) #eaeaea;
+  position: absolute;
+  top: -24px;
+  right: 9%;
+  z-index: -2;
+  transform: rotate(176deg);
+  box-shadow: 5px -3px 11px 9px rgba(0, 0, 0, 0.3);
+}
 
-  clip-path: polygon(100% 82%, 100% 100%, 0% 100%);
-} 
- */
-.articles-container h1 {
+.articles::after {
+  content: "";
+  width: 94%;
+  height: 127px;
+  background: url(/images/articles-bg.jpg) #eaeaea;
+  position: absolute;
+  top: -8px;
+  right: 4%;
+  z-index: -1;
+  transform: rotate(176deg);
+  box-shadow: 5px -3px 11px 9px rgba(0, 0, 0, 0.3);
+}
+.articles h1 {
   text-align: center;
   width: 95%;
   padding: 1rem 0;
   border-top: solid 1px var(--color-primary);
   border-bottom: solid 1px var(--color-primary);
   font-size: 1.9rem;
+  margin: 0 auto;
 }
 
 .articles-items {
   gap: 1rem;
+  margin: 2rem auto;
 }
 
 .articles-item {
@@ -679,7 +696,7 @@ audio::-webkit-media-controls-panel {
   text-align: center;
 }
 
-.articles-container .go-all {
+.articles .go-all {
   margin-top: 2rem;
 }
 

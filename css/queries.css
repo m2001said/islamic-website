@@ -20,6 +20,9 @@
   .card-content {
     gap: 1rem;
   }
+  .articles {
+    margin: 6rem 2rem 2rem 2rem;
+  }
 }
 
 /**************************/
@@ -116,7 +119,18 @@
     padding: 4rem 2rem;
     margin-bottom: 2rem;
   }
+  .link {
+    min-width: 120px;
+    padding: 1.2rem 1rem 0 1rem;
+  }
 
+  .link .bi {
+    font-size: 2.5rem;
+  }
+
+  .link p {
+    height: 70px;
+  }
   .new-lessons .card,
   .new-lectures .card {
     height: 250px;
@@ -125,7 +139,9 @@
   .card-content-info p {
     font-size: 0.8rem;
   }
-
+  .articles {
+    margin: 5rem 2rem 2rem 2rem;
+  }
   .articles-items {
     flex-direction: column;
   }
@@ -136,7 +152,9 @@
     border-bottom: solid 1px var(--color-primary);
     padding-bottom: 1.5rem;
   }
-
+  .articles-back {
+    height: 115%;
+  }
   .swiper-slide-gallery img {
     width: 70%;
   }
@@ -155,7 +173,7 @@
 /* BELOW 470px  */
 /**************************/
 @media (max-width: 470px) {
-  .articles-container h1,
+  .articles h1,
   .title {
     font-size: 1.3rem;
   }
@@ -174,27 +192,20 @@
   .gallery .title::before {
     width: 17rem;
   }
-  .articles-container h1 {
+  .articles::before {
+    width: 83%;
+    top: -13px;
+    transform: rotate(170deg);
+  }
+  .articles h1 {
     margin-bottom: 1.5rem;
+  }
+  .articles-back {
+    height: 110%;
   }
   section {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-  }
-
-  .link {
-    /* min-width: 200px; */
-    padding: 2rem 1rem 0;
-    /* padding: 1rem 3rem 1rem 1rem; */
-  }
-
-  .link .bi {
-    /* font-size: 3rem; */
-  }
-
-  .link p {
-    /* font-size: 1.2rem; */
-    height: 60px;
   }
 
   .card-img {
@@ -234,7 +245,8 @@
   .slide-content,
   .slide-content-new-lessons,
   .slide-content-lectures,
-  .slide-content-new-lectures {
+  .slide-content-new-lectures,
+  .slide-content-speech {
     margin: 0 1.5rem;
     padding: 0 0 2rem 0;
   }
@@ -250,7 +262,9 @@
   .new-lectures {
     padding: 2rem 0;
   }
-
+  .articles {
+    margin: 4rem 2rem 2rem 2rem;
+  }
   .swiper-slide-gallery img {
     width: 80%;
   }
@@ -264,7 +278,7 @@
   .live-content-btns .go-all {
     margin-left: 0rem;
   }
-  .articles-container .go-all {
+  .articles .go-all {
     /* align-self: flex-end; */
     margin: 2rem auto 0 auto;
   }
