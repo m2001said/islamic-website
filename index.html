@@ -44,7 +44,10 @@
 
   <body>
     <!-- for loading -->
-    <div class="loader"></div>
+    <div class="loader">
+      <img src="/images/logo.png" alt="logo" />
+    </div>
+
     <!-- nav bar -->
     <nav class="nav flex">
       <a target="_blank" class="nav-logo" href="/">
@@ -53,12 +56,18 @@
 
       <div class="nav-list">
         <ul class="flex">
-          <li><a href="#lessons">الدروس</a></li>
-          <li><a href="#lectures">المحاضرات</a></li>
-          <li><a href="#speech">الخطب</a></li>
-          <li><a href="#articles">المقالات</a></li>
+          <li><a href="/">الدروس</a></li>
+          <li><a href="/">المحاضرات</a></li>
+          <li class="nav-list-speech">
+            <a href="/">الخطب</a>
+            <!-- <ul class="speech-sub-menu">
+              <li><a href="/"> الخطب المسموعة</a></li>
+              <li><a href="/"> الخطب المكتوبة</a></li>
+            </ul> -->
+          </li>
+          <li><a href="/">المقالات</a></li>
           <li><a href="#gallery">مطويات وبطاقات دعوية</a></li>
-          <li><a href="#live"> البث المباشر</a></li>
+          <li><a href=""> البث المباشر</a></li>
         </ul>
       </div>
 

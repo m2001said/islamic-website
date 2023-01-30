@@ -158,14 +158,52 @@ button {
 /**************************/
 .loader {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  /* background-image: url(/images/logo.png); */
-  background: var(--color-secondary);
   top: 0;
   left: 0;
-  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-white);
+  transition: opacity 0.75s, visibility 0.75s;
+  z-index: 999999;
 }
+.loader img {
+  width: 40%;
+  animation: puff-in-center 1s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
+}
+@keyframes puff-in-center {
+  0% {
+    transform: scale(1.2);
+    filter: drop-shadow(5px 5px 8px var(--color-secondary));
+    /* opacity: 0; */
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(5px 5px 1px var(--color-secondary));
+    /* opacity: 1; */
+  }
+}
+
+/* .loader::after {
+  content: "";
+  width: 60%;
+  height: 10px;
+  border-bottom: 2px solid var(--color-primary);
+
+  animation: loading ease 0.7s infinite;
+} */
+/* @keyframes loading {
+  from {
+    width: 60%;
+  }
+  to {
+    width: 10%;
+  }
+} */
+
 /**************************/
 /*  for scroll animation */
 /**************************/
@@ -221,7 +259,16 @@ button {
   box-shadow: inset 0 300px 0 0 var(--color-primary-light);
   color: var(--color-white);
 }
-
+/* -------for submenu */
+.nav-list-speech {
+  position: relative;
+}
+.speech-sub-menu {
+  position: absolute;
+  background: var(--color-white);
+  padding: 2rem;
+  width: 250px;
+}
 .nav-button {
   width: 30px;
   display: none;
@@ -375,7 +422,7 @@ button {
 .link {
   gap: 2rem;
   padding: 1.5rem 1rem;
-  min-width: 200px;
+  min-width: 20%;
   border: solid 1px transparent;
 }
 
@@ -547,7 +594,8 @@ audio::-webkit-media-controls-panel {
 
 /* ! space around doesn't work i think that from the width of the card */
 .card-content-bottom {
-  /* justify-content: space-around; */
+  justify-content: space-between;
+  width: 100%;
   gap: 1rem;
 }
 
@@ -801,8 +849,7 @@ audio::-webkit-media-controls-panel {
   position: relative;
   overflow: hidden;
   margin-bottom: 0;
-  padding: 3rem 0;
-  /* height: 90vh; */
+  padding: 5rem 1rem;
 }
 
 .live-background {
@@ -810,8 +857,9 @@ audio::-webkit-media-controls-panel {
   background-color: var(--color-primary);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom bottom;
-  height: 90vh;
+
+  /* background-position: bottom; */
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -831,12 +879,23 @@ audio::-webkit-media-controls-panel {
 }
 
 .live-content-btns {
-  /* justify-content: space-between; */
-  gap: 5rem;
-  flex-wrap: wrap;
-  /* margin: 0 auto; */
-}
+  justify-content: space-between;
+  gap: 6rem;
 
+  padding-bottom: 2rem;
+}
+.live .go-all {
+  gap: 1rem;
+  width: 300px;
+}
+.live .go-all .bi {
+  flex: 1;
+}
+.live .go-all p {
+  flex: 4;
+  padding-right: 2rem;
+  text-align: center;
+}
 /**************************/
 /* footer */
 /**************************/

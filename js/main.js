@@ -195,13 +195,9 @@ navLinks.forEach((link) => {
     });
   });
 });
-// -----------loader-----------
+
 window.onload = function () {
   let loader = document.querySelector(".loader");
-  document.body.style.overflow = "hidden";
 
-  setTimeout(function () {
-    loader.style.display = "none";
-    document.body.style.overflow = "auto";
-  }, 3000);
+  loader.style.display = "none";
 };
