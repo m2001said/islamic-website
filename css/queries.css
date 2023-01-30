@@ -213,11 +213,6 @@
     width: 100px;
   }
 
-  /* .card-content-info {
-    flex-direction: column;
-  } 
-   */
-
   .card-content {
     /* justify-content: flex-start; */
     align-items: flex-start;
@@ -263,7 +258,7 @@
     padding: 2rem 0;
   }
   .articles {
-    margin: 4rem 2rem 2rem 2rem;
+    margin: 4rem 1rem 2rem 1rem;
   }
   .swiper-slide-gallery img {
     width: 80%;

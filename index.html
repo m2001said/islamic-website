@@ -43,20 +43,22 @@
   </head>
 
   <body>
+    <!-- for loading -->
+    <div class="loader"></div>
     <!-- nav bar -->
     <nav class="nav flex">
-      <a target="_blank" class="nav-logo" href="#">
+      <a target="_blank" class="nav-logo" href="/">
         <img src="/images/logo.png" alt="logo" />
       </a>
 
       <div class="nav-list">
         <ul class="flex">
-          <li><a href="#">الدروس</a></li>
-          <li><a href="#">المحاضرات</a></li>
-          <li><a href="#">الخطب</a></li>
-          <li><a href="#">المقالات</a></li>
-          <li><a href="#">مطويات وبطاقات دعوية</a></li>
-          <li><a href="#"> البث المباشر</a></li>
+          <li><a href="#lessons">الدروس</a></li>
+          <li><a href="#lectures">المحاضرات</a></li>
+          <li><a href="#speech">الخطب</a></li>
+          <li><a href="#articles">المقالات</a></li>
+          <li><a href="#gallery">مطويات وبطاقات دعوية</a></li>
+          <li><a href="#live"> البث المباشر</a></li>
         </ul>
       </div>
 
@@ -91,7 +93,7 @@
     </section>
 
     <!-- links -->
-    <section class="links">
+    <section class="links scroll-left">
       <a href="#" class="link flex-column">
         <i class="bi bi-book"></i>
         <p>الدروس</p>
@@ -119,8 +121,8 @@
     </section>
 
     <!-- lessons -->
-    <section class="lessons">
-      <h1 class="title flex">الدروس</h1>
+    <section class="lessons" id="lessons">
+      <h1 class="title scroll-right flex">الدروس</h1>
 
       <div class="slide-container swiper">
         <div class="slide-content">
@@ -261,7 +263,7 @@
         <div class="swiper-pagination"></div>
       </div>
 
-      <a target="_blank" class="go-all flex">
+      <a target="_blank" class="go-all flex scroll-left">
         <p>كل الدروس</p>
         <i class="bi bi-chevron-double-left go-all-icon"></i>
       </a>
@@ -269,7 +271,7 @@
 
     <!-- new-lessons -->
     <section class="new-lessons">
-      <h1 class="title flex">جديد الدروس</h1>
+      <h1 class="title scroll-right flex">جديد الدروس</h1>
 
       <div class="slide-container swiper">
         <div class="slide-content-new-lessons">
@@ -356,8 +358,8 @@
     </section>
 
     <!-- lectures -->
-    <section class="lectures">
-      <h1 class="title flex">المحاضرات</h1>
+    <section class="lectures" id="lectures">
+      <h1 class="title scroll-right flex">المحاضرات</h1>
 
       <div class="slide-container swiper">
         <div class="slide-content-lectures">
@@ -461,7 +463,7 @@
         <div class="swiper-pagination-lectures"></div>
       </div>
 
-      <a target="_blank" class="go-all flex">
+      <a target="_blank" class="go-all flex scroll-left">
         <p>كل المحاضرات</p>
         <i class="bi bi-chevron-double-left go-all-icon"></i>
       </a>
@@ -469,7 +471,7 @@
 
     <!-- new lectures -->
     <section class="new-lectures">
-      <h1 class="title flex">جديد المحاضرات</h1>
+      <h1 class="title scroll-right flex">جديد المحاضرات</h1>
 
       <div class="slide-container swiper">
         <div class="slide-content-new-lectures">
@@ -556,8 +558,8 @@
     </section>
 
     <!-- speech -->
-    <section class="lectures speech">
-      <h1 class="title flex">الخطب</h1>
+    <section class="lectures speech" id="speech">
+      <h1 class="title scroll-right flex">الخطب</h1>
 
       <div class="slide-container swiper">
         <div class="slide-content-speech">
@@ -661,16 +663,16 @@
         <div class="swiper-pagination-speech"></div>
       </div>
 
-      <a target="_blank" class="go-all flex">
+      <a target="_blank" class="go-all flex scroll-left">
         <p>كل الخطب</p>
         <i class="bi bi-chevron-double-left go-all-icon"></i>
       </a>
     </section>
     <!-- articles -->
-    <section class="articles">
+    <section class="articles" id="articles">
       <div class="articles-back"></div>
       <!-- <div class="articles-container flex-column"> -->
-      <h1>المقالات</h1>
+      <h1 class="scroll-right">المقالات</h1>
       <div class="articles-items flex">
         <div class="articles-item flex-column">
           <h4 class="card-content-title">اول واجب علي المسلم</h4>
@@ -697,7 +699,7 @@
           </p>
         </div>
       </div>
-      <a target="_blank" class="go-all flex">
+      <a target="_blank" class="go-all flex scroll-left">
         <p>كل المقالات</p>
         <i class="bi bi-chevron-double-left go-all-icon"></i>
       </a>
@@ -707,8 +709,8 @@
     </section>
 
     <!-- gallery -->
-    <section class="gallery flex-column">
-      <h1 class="title">مطويات وبطاقات دعوية</h1>
+    <section class="gallery flex-column" id="gallery">
+      <h1 class="title scroll-right">مطويات وبطاقات دعوية</h1>
 
       <div class="swiper swiper-gallery mySwiper2">
         <div class="swiper-wrapper">
@@ -786,10 +788,10 @@
     </section>
 
     <!-- live -->
-    <section class="live">
+    <section class="live" id="live">
       <div class="live-background"></div>
       <div class="live-content flex-column">
-        <h1 class="title">البث المباشر</h1>
+        <h1 class="title scroll-right">البث المباشر</h1>
         <div class="live-content-btns flex">
           <a class="go-all flex">
             <p>البث المباشر (صوتي)</p>
@@ -811,7 +813,7 @@
         <a target="_blank" href="#"> <i class="bi bi-youtube"></i> </a>
         <a target="_blank" href="#"> <i class="bi bi-twitter"></i> </a>
       </div>
-      <a target="_blank" class="nav-logo" href="#">
+      <a target="_blank" class="nav-logo" href="/">
         <img src="/images/logo.png" alt="logo" />
       </a>
     </footer>
