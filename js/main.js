@@ -1,13 +1,3 @@
-// -----navbar for mobile ------------
-
-// let navButton = document.querySelector(".nav-button");
-
-// navButton.onclick = () => {
-//   navList = document.querySelector(".nav-list");
-//   navList.classList.toggle("active");
-//   navButton.classList.toggle("active");
-// };
-
 // -------background of hero section---------
 
 const changeHero = () => {

@@ -233,6 +233,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
 }
 .main-nav-holder {
   transition: 0.2s;
@@ -919,7 +920,7 @@ audio::-webkit-media-controls-panel {
 .footer {
   justify-content: space-between;
   padding: 1rem 2rem;
-  box-shadow: 3px -3px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
 }
 .footer .social {
   margin-top: 0;
