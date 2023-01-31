@@ -234,6 +234,7 @@ nav {
   justify-content: space-between;
   padding: 0 1rem;
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
+  background: var(--color-white);
 }
 .main-nav-holder {
   transition: 0.2s;
@@ -935,6 +936,7 @@ audio::-webkit-media-controls-panel {
   justify-content: space-between;
   padding: 1rem 2rem;
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
+  background: var(--color-white);
 }
 .footer .social {
   margin-top: 0;

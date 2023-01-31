@@ -200,6 +200,22 @@
   border-bottom: 1px solid var(--color-primary);
 }
 /**************************/
+/* --------live-page */
+/**************************/
+.live-page {
+  position: relative;
+}
+.live-page .title::before {
+  width: 110%;
+}
+.live-page .live-content > p {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/**************************/
 /* --------media queries for pages */
 /**************************/
 @media (max-width: 1100px) {
