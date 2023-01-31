@@ -292,6 +292,9 @@
   .articles-items {
     flex-direction: column;
   }
+  .articles-item {
+    width: 100%;
+  }
 
   .articles-item:first-child {
     border-left: solid 1px transparent;
