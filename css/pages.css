@@ -34,7 +34,7 @@
   color: var(--color-white);
 }
 
-.data-container {
+#dataContainer {
   padding-top: 2rem;
 }
 #dataContainer {
@@ -64,10 +64,30 @@
   padding: 0.2rem 0.5rem;
 }
 
+#prev,
+#next {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.div-raduis {
+  border-radius: 1rem;
+  border-top: solid 3px var(--color-secondary-light);
+}
+
+/* --------media queries for pages */
 @media (max-width: 900px) {
   #dataContainer {
     /* flex-direction: column; */
 
     gap: 1.5rem;
   }
+  #dataContainer .card {
+    /* width: 100%; */
+    max-width: 900px;
+    height: 250px;
+    margin: 0 1rem;
+  }
+}
+@media (max-width: 700px) {
 }

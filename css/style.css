@@ -400,11 +400,12 @@ nav {
   font-weight: 600;
   text-align: center;
   line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
 .social {
   gap: 1rem;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 .social .bi {
@@ -503,6 +504,7 @@ nav {
 .card-content-title {
   font-size: 1.3rem;
   color: var(--color-primary);
+  flex: 1;
 }
 
 .card-content-info {
@@ -599,6 +601,7 @@ nav {
 
 audio {
   width: 100%;
+  flex: 1;
 }
 
 audio::-webkit-media-controls-panel {
@@ -610,11 +613,11 @@ audio::-webkit-media-controls-panel {
   height: 300px;
 }
 
-/* ! space around doesn't work i think that from the width of the card */
 .card-content-bottom {
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
+  flex: 1;
 }
 
 .swiper-pagination-new-lessons,

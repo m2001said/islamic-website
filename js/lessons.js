@@ -221,11 +221,11 @@ function renderPageNumbers() {
     pageNumbersContainer.appendChild(pageNumber);
   }
 
-  prevBtn.style.display = currentPage === 1 ? "none" : "inline-block";
+  prevBtn.style.display = currentPage === 1 ? "none" : "block";
   nextBtn.style.display =
     currentPage === Math.ceil(fakeData.length / itemsPerPage)
       ? "none"
-      : "inline-block";
+      : "block";
 }
 
 prevBtn.addEventListener("click", () => {
