@@ -88,21 +88,22 @@
     <div class="flex">
       <div class="bread-crumbs flex">
         <a href="/">الرئيسية</a>
-        <a href="/lectures.html">المحاضرات</a>
+        <a href="/speeches.html">المقالات </a>
       </div>
     </div>
 
-    <!-- container div -->
-    <section class="flex new-lessons" id="dataContainer"></section>
+    <!--written speeches  -->
+    <section class="articles written-speeches">
+      <h1>المقالات</h1>
+      <div class="written-speeches-content flex" id="dataContainer"></div>
+      <!-- pagination -->
+      <div id="pagination">
+        <button id="prev">السابق</button>
+        <span id="pageNumbers"></span>
+        <button id="next">التالي</button>
+      </div>
+    </section>
 
-    <!-- pagination -->
-    <div id="pagination">
-      <button id="prev">السابق</button>
-      <span id="pageNumbers"></span>
-      <button id="next">التالي</button>
-    </div>
-
-    
     <!-- footer -->
     <footer class="footer flex">
       <h4>جميع الحقوق محفوظة &#169; 2023</h4>
@@ -115,9 +116,6 @@
         <img src="/images/logo.png" alt="logo" />
       </a>
     </footer>
-
-    <!-- js files -->
-
-    <script src="js/lectures.js"></script>
+    <script src="js/writtenSpeeches.js"></script>
   </body>
 </html>

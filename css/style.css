@@ -728,7 +728,7 @@ audio::-webkit-media-controls-panel {
   position: relative;
   background: url(/images/articles-bg.jpg) #eaeaea;
   padding: 1rem 2rem 0 2rem;
-  box-shadow: 5px -9px 20px -3px rgb(0 0 0 / 30%);
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.3);
   margin: 7rem auto 2rem auto;
 }
 .articles-back {
@@ -751,7 +751,7 @@ audio::-webkit-media-controls-panel {
   right: 9%;
   z-index: -2;
   transform: rotate(176deg);
-  box-shadow: 5px -3px 11px 9px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.3);
 }
 
 .articles::after {
@@ -764,7 +764,7 @@ audio::-webkit-media-controls-panel {
   right: 4%;
   z-index: -1;
   transform: rotate(176deg);
-  box-shadow: 5px -3px 11px 9px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 9px 3px rgba(0, 0, 0, 0.3);
 }
 .articles h1 {
   text-align: center;
@@ -774,6 +774,7 @@ audio::-webkit-media-controls-panel {
   border-bottom: solid 1px var(--color-primary);
   font-size: 1.9rem;
   margin: 0 auto;
+  color: var(--color-primary);
 }
 
 .articles-items {
@@ -783,8 +784,18 @@ audio::-webkit-media-controls-panel {
 
 .articles-item {
   gap: 1.5rem;
+  width: 600px;
+  min-height: 200px;
 }
-
+.articles-item .card-content-info {
+  flex: 1;
+}
+.articles-item h4 {
+  flex: 2;
+}
+.card-content-article {
+  flex: 2;
+}
 .articles-item .card-content-info p {
   background: var(--color-secondary);
   color: var(--color-white);
