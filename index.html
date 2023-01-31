@@ -49,35 +49,45 @@
     </div>
 
     <!-- nav bar -->
-    <nav class="nav flex">
+    <nav>
+      <label for="toggleMainNav" class="hamburger-menu"></label>
+      <input type="checkbox" id="toggleMainNav" class="check-toggle" />
+
+      <label for="toggleMainNav" class="menu-overlay"></label>
+
       <a target="_blank" class="nav-logo" href="/">
         <img src="/images/logo.png" alt="logo" />
       </a>
 
-      <div class="nav-list">
-        <ul class="flex">
+      <div class="main-nav-holder">
+        <ul class="main-nav">
+          <li class="close-nav">
+            <label for="toggleMainNav"></label>
+          </li>
           <li><a href="/">الدروس</a></li>
           <li><a href="/">المحاضرات</a></li>
-          <li class="nav-list-speech">
-            <a href="/">الخطب</a>
-            <!-- <ul class="speech-sub-menu">
-              <li><a href="/"> الخطب المسموعة</a></li>
-              <li><a href="/"> الخطب المكتوبة</a></li>
-            </ul> -->
+
+          <li class="has-submenu">
+            <input type="checkbox" id="labelMen" class="check-toggle" />
+            <label for="labelMen">الخطب</label>
+
+            <i class="menu-caret"></i>
+            <ul class="submenu">
+              <li>
+                <a href="#">الخطب المسموعة</a>
+              </li>
+              <li>
+                <a href="#">الخطب المكتوبة</a>
+              </li>
+            </ul>
           </li>
+
           <li><a href="/">المقالات</a></li>
           <li><a href="#gallery">مطويات وبطاقات دعوية</a></li>
-          <li><a href=""> البث المباشر</a></li>
+          <li><a href="/"> البث المباشر</a></li>
         </ul>
       </div>
-
-      <button class="nav-button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
-
     <!-- hero section -->
     <section class="hero flex">
       <div class="hero-background"></div>

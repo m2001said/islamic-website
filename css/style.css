@@ -223,108 +223,125 @@ button {
 /**************************/
 /*  nav */
 /**************************/
-.nav {
-  justify-content: space-between;
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  padding: 0 1rem;
-  position: relative;
-  z-index: 999;
-}
-
 .nav-logo img {
   height: 3rem;
 
   margin-top: 5px;
 }
-
-.nav-list {
-  color: var(--color-primary-light);
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.main-nav-holder {
+  transition: 0.2s;
+}
+.main-nav {
+  display: flex;
+}
+.main-nav > li {
+  position: relative;
 }
 
-.nav-list ul a {
+.main-nav > li > a,
+.main-nav > li.has-submenu > label,
+.submenu > li > a {
+  display: block;
   color: var(--color-primary-light);
   font-size: 1rem;
   font-weight: 600;
-  padding: 1.2rem 0.5rem;
+  padding: 1.2rem 0.8rem;
   box-shadow: inset 0 0 0 0 var(--color-primary-light);
   transition: all 0.6s;
 }
-
-.nav-list ul li a {
-  color: var(--color-primary-light);
-  transition: all 0.5s;
-}
-
-.nav-list ul li:hover a {
+/* .main-nav > li:hover { */
+.main-nav > li:hover > a,
+.main-nav li.has-submenu label:hover {
   box-shadow: inset 0 300px 0 0 var(--color-primary-light);
   color: var(--color-white);
 }
-/* -------for submenu */
-.nav-list-speech {
+
+.main-nav > li.has-submenu > label {
+  cursor: pointer;
+  /* padding: 0.8rem 2.8rem 0.8rem 1.5rem; */
+  padding-right: 2rem;
   position: relative;
 }
-.speech-sub-menu {
+
+.main-nav > li.close-nav {
+  display: none;
+}
+.main-nav > li.active > a,
+.main-nav > li.active > a:link,
+.main-nav > li.active > a:visited,
+.main-nav > li.active > label {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+}
+.menu-caret {
+  border-bottom: 0.4rem solid transparent;
+  border-top: 0.4rem solid transparent;
+  border-left: 0.4rem solid var(--color-secondary);
+  display: inline-block;
+  line-height: 0;
+  margin: 0 -0.3rem 0 1.2rem;
   position: absolute;
+  right: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
+.submenu {
+  display: flex;
   background: var(--color-white);
-  padding: 2rem;
-  width: 250px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
+  /* padding: 1rem; */
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+  visibility: hidden;
+  transform: translateY(-5rem);
+  white-space: nowrap;
+  z-index: 1;
 }
-.nav-button {
-  width: 30px;
+.submenu > li {
+  position: relative;
+}
+
+.submenu > li {
+  box-shadow: inset 0 0 0 0 var(--color-primary-light);
+  transition: all 0.6s;
+  padding: 0.3rem;
+  /* box-shadow: inset 0 0 0 0 var(--color-primary-light); */
+}
+.submenu > li:hover {
+  box-shadow: inset 0 300px 0 0 var(--color-primary-light);
+  color: var(--color-white);
+}
+.submenu > li:hover > a {
+  color: var(--color-white);
+}
+
+.check-toggle {
   display: none;
 }
-
-.nav-button span {
-  width: 98%;
-  height: 1px;
-  display: block;
-  background-color: var(--color-primary);
-  margin-top: 9px;
-  margin-bottom: 10px;
-  transition: all 0.3s;
+.check-toggle:checked ~ label {
+  background: var(--color-gray);
 }
-
-.nav-button:hover span:nth-of-type(1) {
-  transform: rotateY(180deg);
-  transition: all 0.5s;
-  background-color: var(--color-primary);
+.check-toggle:checked ~ .menu-caret {
+  transform: rotate(90deg);
+  margin: -0.3rem -0.3rem 0 1.2rem;
 }
-
-.nav-button:hover span:nth-of-type(2) {
-  transform: rotateY(180deg);
-  transition: all 0.4s;
-  background-color: var(--color-primary);
+.check-toggle:checked ~ .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
-
-.nav-button:hover span:nth-of-type(3) {
-  transform: rotateY(180deg);
-  transition: all 0.3s;
-  background-color: var(--color-primary);
-}
-
-/* for js  */
-.nav-button.active span:nth-of-type(1) {
-  transform: rotate3d(0, 0, 1, 45deg);
-  margin: 0;
-}
-
-.nav-button.active span:nth-of-type(2) {
+.hamburger-menu,
+.menu-overlay {
   display: none;
 }
-
-.nav-button.active span:nth-of-type(3) {
-  transform: rotate3d(0, 0, 1, -45deg);
-  margin: 0;
-}
-
-.nav-button.active:hover span:nth-of-type(1) {
-  transform: rotate3d(0, 0, 1, -135deg);
-}
-
-/* .nav-button.active:hover span:nth-of-type(3) {
-  transform: rotate3d(0, 0, 1, 135deg);
-} 
- */
 /**************************/
 /*  hero */
 /**************************/

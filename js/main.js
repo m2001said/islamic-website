@@ -1,12 +1,12 @@
 // -----navbar for mobile ------------
 
-let navButton = document.querySelector(".nav-button");
+// let navButton = document.querySelector(".nav-button");
 
-navButton.onclick = () => {
-  navList = document.querySelector(".nav-list");
-  navList.classList.toggle("active");
-  navButton.classList.toggle("active");
-};
+// navButton.onclick = () => {
+//   navList = document.querySelector(".nav-list");
+//   navList.classList.toggle("active");
+//   navButton.classList.toggle("active");
+// };
 
 // -------background of hero section---------
 
@@ -181,21 +181,22 @@ function checkLeftBox() {
 }
 
 // -----------smooth scrolling------------
-let navLinks = document.querySelectorAll("nav a");
+// let navLinks = document.querySelectorAll("nav a");
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    let currentId = e.target.attributes.href.value;
-    let section = document.querySelector(currentId);
-    let sectionPosition = section.offsetTop;
-    window.scroll({
-      top: sectionPosition,
-      behavior: "smooth",
-    });
-  });
-});
+// navLinks.forEach((link) => {
+//   link.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     let currentId = e.target.attributes.href.value;
+//     let section = document.querySelector(currentId);
+//     let sectionPosition = section.offsetTop;
+//     window.scroll({
+//       top: sectionPosition,
+//       behavior: "smooth",
+//     });
+//   });
+// });
 
+// -----------loading ------------
 window.onload = function () {
   let loader = document.querySelector(".loader");
 
