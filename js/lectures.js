@@ -216,6 +216,7 @@ function renderPageNumbers() {
 
     pageNumber.addEventListener("click", () => {
       currentPage = i;
+      window.scrollTo(0, 0);
       renderData();
     });
 
@@ -231,11 +232,14 @@ function renderPageNumbers() {
 
 prevBtn.addEventListener("click", () => {
   currentPage--;
+
+  window.scrollTo(0, 0);
   renderData();
 });
 
 nextBtn.addEventListener("click", () => {
   currentPage++;
+  window.scrollTo(0, 0);
   renderData();
 });
 
