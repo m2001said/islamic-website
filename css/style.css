@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;900&display=swap"); */
 :root {
   --color-primary: #383027;
   --color-primary-light: #6c5a4d;
@@ -9,7 +9,10 @@
   --color-gray-dark: #959596;
   --color-white: #fff;
 }
-
+@font-face {
+  font-family: "Alexandria";
+  src: url("/assests/Alexandria-VariableFont_wght.ttf") format("truetype");
+}
 * {
   padding: 0;
   margin: 0;
@@ -90,7 +93,7 @@ ul li {
   z-index: -1;
 }
 .link-title:hover {
-  text-decoration: underline;
+  text-decoration: underline var(--color-primary-light);
 }
 button {
   display: inline-block;
