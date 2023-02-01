@@ -191,7 +191,11 @@
     justify-content: flex-start;
   }
 }
-
+@media (max-width: 860px) {
+  .links .links-icon {
+    display: block;
+  }
+}
 /**************************/
 /* BELOW 704px (Smaller tablets) */
 /**************************/
