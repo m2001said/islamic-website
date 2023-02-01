@@ -204,7 +204,7 @@ function renderData() {
     objectInfo.innerHTML = `
 
     <div class="articles-item flex-column">
-    <a href="/writtenSpeech.html" class="link-title">
+    <a href="/article.html" class="link-title">
     <h4 class="card-content-title">${item.name}</h4>
     </a>
     <div class="card-content-info flex">

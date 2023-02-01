@@ -154,9 +154,10 @@ function checkTop(element) {
   const boxTop = element.getBoundingClientRect().top;
   if (boxTop < triggerBottom) {
     element.classList.add("show");
-  } else {
-    element.classList.remove("show");
   }
+  //  else {
+  //   element.classList.remove("show");
+  // }
 }
 
 function checkRightBox() {
@@ -187,8 +188,11 @@ function checkLeftBox() {
 // });
 
 // -----------loading ------------
-window.onload = function () {
-  let loader = document.querySelector(".loader");
+setTimeout(
+  (window.onload = function () {
+    let loader = document.querySelector(".loader");
 
-  loader.style.display = "none";
-};
+    loader.style.display = "none";
+  }),
+  4000
+);

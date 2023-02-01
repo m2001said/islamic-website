@@ -87,7 +87,9 @@ ul li {
   transform: translate(-50%);
   z-index: -1;
 }
-
+.link-title:hover {
+  text-decoration: underline;
+}
 button {
   display: inline-block;
   text-decoration: none;

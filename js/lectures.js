@@ -161,9 +161,9 @@ function renderData() {
     const objectInfo = document.createElement("div");
     objectInfo.classList.add("card", "flex-column", "div-raduis");
     objectInfo.innerHTML = `
-
+    <a class="link-title" href="/lecture.html"> 
     <h4 class="card-content-title">${item.name}</h4>
-   
+   </a>
     <audio controls src="/assests/musiqe.mp3" type="audio/mpeg"></audio>
     <div class="card-content-bottom flex">
       <div class="card-content-info flex">

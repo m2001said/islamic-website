@@ -160,9 +160,11 @@
 /**************************/
 /* --------speeches page */
 /**************************/
+
 .written-speeches .go-all {
   width: 220px;
 }
+
 .voice-speeches {
   max-width: 1200px;
   margin: 0 auto;
@@ -193,6 +195,7 @@
   padding: 4rem 0 4rem 0;
 }
 .written-speeches-content > div {
+  height: 280px;
   max-width: 450px;
   border: solid 1px var(--color-primary-light);
   padding: 1rem;
@@ -281,12 +284,20 @@
     border-bottom: solid 1px transparent;
     padding-bottom: 0;
   }
+  .speeches.written-speeches .articles-item:first-child {
+    border-left: solid 1px transparent;
+    padding-left: 0;
+    border-bottom: solid 1px var(--color-primary);
+    padding-bottom: 1.5rem;
+  }
+
   .written-speeches .articles-item {
     gap: 1rem;
     width: 100%;
   }
   .written-speeches-content > div {
     width: 100%;
+    height: 100%;
   }
   .bread-crumbs {
     /* flex-wrap: wrap; */

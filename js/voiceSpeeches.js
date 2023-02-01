@@ -7,14 +7,14 @@ const fakeData = [
     link: "https://drosuae.com/Download/shk_3azez_far7an/radio%26tv/sareatu_al_nur/2023_1_29_793.mp3",
   },
   {
-    name: "شرح كتاب 2",
+    name: "شرح كتاب رياض الصالحين الفصل السابع الدرس الخامس عشر من كتاب رياض الصالحين",
     data: "23-2-2023",
     numbers: "43",
     image: "/images/book1.jpg",
     link: "https://drosuae.com/Download/shk_3azez_far7an/radio%26tv/sareatu_al_nur/2023_1_29_793.mp3",
   },
   {
-    name: "شرح كتاب 3",
+    name: "شرح كتاب عنوان حجمه اصغر اصغر شوية شوية شوية",
     data: "23-2-2023",
     numbers: "43",
     image: "/images/book1.jpg",
@@ -159,40 +159,40 @@ function renderData() {
 
   pageData.forEach((item) => {
     const objectInfo = document.createElement("div");
-    objectInfo.classList.add("card", "flex");
+    objectInfo.classList.add("card", "flex-column", "div-raduis");
     objectInfo.innerHTML = `
-   
-    <img class="card-img" src=${item.image} alt="book" />
-    <div class="card-content flex-column">
-    <a class="link-title" href="/lesson.html">     <h4 class="card-content-title">${item.name}</h4>
-    </a>
-    <div class="card-content-info flex">
-        <p>${item.numbers}</p>
-        <p>${item.data}</p>
+    <a class="link-title" href="/voiceSpeech.html"> 
+    <h4 class="card-content-title">${item.name}</h4>
+   </a>
+    <audio controls src="/assests/musiqe.mp3" type="audio/mpeg"></audio>
+    <div class="card-content-bottom flex">
+      <div class="card-content-info flex">
+        <p>34 درس</p>
+        <p>31-1-1433</p>
       </div>
       <div class="social flex">
-        
+        <!-- you should put dynamic link like this  https://www.facebook.com/share.php?u=    &{link} -->
         <a
           target="_blank"
-          href="https://www.facebook.com/sharer/sharer.php?u=${item.link}"
+          href="https://www.facebook.com/sharer/sharer.php?u=https://drosuae.com/Download/shk_3azez_far7an/radio%26tv/sareatu_al_nur/2023_1_29_793.mp3"
         >
           <i class="bi bi-facebook"></i>
         </a>
         <a
           target="_blank"
-          href="https://t.me/share/url?url=${item.link}"
+          href="https://t.me/share/url?url=https://drosuae.com/Download/shk_3azez_far7an/radio%26tv/sareatu_al_nur/2023_1_29_793.mp3"
         >
           <i class="bi bi-telegram"></i>
         </a>
         <a
           target="_blank"
-          href="http://twitter.com/share?&url=${item.link}"
+          href="http://twitter.com/share?&url=https://drosuae.com/Download/shk_3azez_far7an/radio%26tv/sareatu_al_nur/2023_1_29_793.mp3"
         >
           <i class="bi bi-twitter"></i>
         </a>
       </div>
     </div>
- 
+
     `;
 
     dataContainer.appendChild(objectInfo);
@@ -232,6 +232,7 @@ function renderPageNumbers() {
 
 prevBtn.addEventListener("click", () => {
   currentPage--;
+
   window.scrollTo(0, 0);
   renderData();
 });
