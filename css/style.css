@@ -95,7 +95,7 @@ button {
   border: none;
   cursor: pointer;
   font-family: inherit;
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 
 .go-all {
@@ -152,7 +152,29 @@ button {
     transform: translateX(-8px);
   }
 }
+/**************************/
+/*  srcllbar */
+/**************************/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-secondary-light);
+  border: solid 1px var(--color-gray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
 /**************************/
 /*  loader */
 /**************************/
@@ -437,6 +459,9 @@ nav {
   background: var(--color-primary-light);
   overflow: auto;
   display: flex;
+}
+.links::-webkit-scrollbar {
+  height: 10px;
 }
 
 .link {

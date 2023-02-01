@@ -79,6 +79,33 @@
   border-top: solid 3px var(--color-secondary-light);
 }
 /**************************/
+/* lesson page */
+/**************************/
+.lesson .title::before {
+  width: 21rem;
+}
+.lesson-btn-container {
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+.lesson-btn-container .filter-btn {
+  background: var(--color-white);
+  font-size: 1.4rem;
+  padding: 0.5rem;
+
+  color: var(--color-primary-light);
+  box-shadow: inset 0 0 0 0 var(--color-primary-light),
+    0px 0px 9px 0px rgba(0, 0, 0, 0.3);
+  border: solid 1px var(--color-secondary-light);
+  transition: all 0.4s;
+}
+.lesson-btn-container .filter-btn:hover {
+  box-shadow: inset 0 300px 0 0 var(--color-primary-light);
+  color: var(--color-white);
+}
+/**************************/
 /* voice-speech page */
 /**************************/
 .voice-speech {
@@ -269,6 +296,9 @@
   }
 }
 @media (max-width: 500px) {
+  .lesson .title::before {
+    width: 15rem;
+  }
   .voice-speech-about {
     gap: 1rem;
   }
@@ -287,5 +317,14 @@
   .voice-speech .card-content-info p,
   .written-speech .card-content-info p {
     font-size: 1rem;
+  }
+  .lesson-btn-container .filter-btn {
+    font-size: 1.1rem;
+  }
+  .lesson-btn-container {
+    margin: 1rem 0;
+  }
+  .lesson .title {
+    margin-top: 1.5rem;
   }
 }
