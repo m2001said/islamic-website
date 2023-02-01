@@ -28,6 +28,8 @@ body {
   direction: rtl;
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 a {

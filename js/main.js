@@ -150,7 +150,7 @@ window.addEventListener("scroll", checkLeftBox);
 
 // for checking top of element
 function checkTop(element) {
-  const triggerBottom = (window.innerHeight / 5) * 4;
+  const triggerBottom = (window.innerHeight / 4) * 4;
   const boxTop = element.getBoundingClientRect().top;
   if (boxTop < triggerBottom) {
     element.classList.add("show");
