@@ -171,51 +171,6 @@
 /**************************/
 
 @media (max-width: 59em) {
-  /* .nav-list {
-    overflow: hidden;
-    position: absolute;
-    top: 47px;
-    left: 0;
-    width: 300px;
-    height: 0;
-
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.3);
-    background: var(--color-white);
-    transition: all 0.3s;
-  }
-
-  .nav-list.active {
-    height: 420px;
-  }
-
-  .nav-list.active ul {
-    opacity: 1;
-  }
-
-  .nav-list.active ul li {
-    width: 100%;
-    padding-bottom: 1.2rem;
-    border-bottom: solid 1px var(--color-primary-light);
-  }
-
-  .nav-list.active ul li:hover a {
-    box-shadow: inset 0 0 0 0 var(--color-primary-light);
-    color: var(--color-primary-light);
-
-    padding-right: 2rem;
-  }
-
-  .nav-list ul {
-    flex-direction: column;
-    gap: 2rem;
-    padding-top: 1.6rem;
-    opacity: 0;
-  }
-
-  .nav-button {
-    display: block;
-  } */
-
   .card {
     height: 200px;
   }
@@ -229,6 +184,11 @@
   }
   .footer .nav-logo img {
     height: 2.5rem;
+  }
+  .links {
+    /* display: block; */
+    overflow: auto;
+    justify-content: flex-start;
   }
 }
 
