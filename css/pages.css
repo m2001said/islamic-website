@@ -230,10 +230,10 @@
   border: solid 1px var(--color-primary-light);
   padding: 1rem;
 }
-.written-speeches-content .articles-item:first-child {
+/* .written-speeches-content .articles-item:first-child {
   border-left: none;
   padding-left: 0;
-}
+} */
 .written-speeches-content .articles-items {
   margin: 0 0;
   /* gap: 0; */
@@ -309,10 +309,10 @@
 }
 @media (max-width: 704px) {
   .written-speeches .articles-item:first-child {
-    border-left: solid 1px transparent;
-    padding-left: 0;
+    border-left: solid 1px var(--color-primary);
+    /*   padding-left: 0;
     border-bottom: solid 1px transparent;
-    padding-bottom: 0;
+    padding-bottom: 0; */
   }
   .speeches.written-speeches .articles-item:first-child {
     border-left: solid 1px transparent;
