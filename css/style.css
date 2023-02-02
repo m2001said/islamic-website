@@ -95,6 +95,10 @@ ul li {
 .link-title:hover {
   text-decoration: underline var(--color-primary-light);
 }
+.seen-sub-title {
+  color: var(--color-gray-dark);
+  margin-top: 5px;
+}
 button {
   display: inline-block;
   text-decoration: none;
@@ -264,6 +268,30 @@ nav {
   padding: 0 1rem;
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
   background: var(--color-white);
+}
+nav form {
+  gap: 5px;
+}
+nav form input {
+  width: 200px;
+  font-size: 1.2rem;
+  padding: 8px;
+  border: solid 1px var(--color-secondary);
+  border-radius: 0 5px 5px 0;
+}
+nav form input:focus {
+  color: var(--color-primary-light);
+}
+
+nav form button {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+  font-size: 1.5rem;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+}
+.nav-box {
+  gap: 1rem;
 }
 .main-nav-holder {
   transition: 0.2s;

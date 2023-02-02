@@ -119,6 +119,7 @@
   border-radius: 5px;
   font-size: 1rem;
   animation: shake-horizontal 10s linear infinite both;
+  display: none;
 }
 .lesson-btn-container .filter-btn {
   background: var(--color-white);
@@ -343,6 +344,9 @@
   }
   .lesson-btn-container button {
     margin: 0 5px;
+  }
+  .btn-icon {
+    display: block;
   }
 }
 @media (max-width: 500px) {
