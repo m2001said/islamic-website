@@ -29,9 +29,9 @@
 /* for nav menu */
 /**************************/
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   nav {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
   .hamburger-menu,
   .menu-overlay {
@@ -225,7 +225,9 @@
   .nav-logo img {
     height: 2.5rem;
   }
-
+  .search-bar .icon {
+    padding: 0.8rem;
+  }
   section {
     padding: 4rem 2rem;
     margin-bottom: 2rem;

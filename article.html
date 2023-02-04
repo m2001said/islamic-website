@@ -46,38 +46,44 @@
         <img src="/images/logo.png" alt="logo" />
       </a>
 
-      <label for="toggleMainNav" class="hamburger-menu"></label>
-      <input type="checkbox" id="toggleMainNav" class="check-toggle" />
+      <div class="flex search-links-box">
+        <label for="toggleMainNav" class="hamburger-menu"></label>
+        <input type="checkbox" id="toggleMainNav" class="check-toggle" />
 
-      <label for="toggleMainNav" class="menu-overlay"></label>
+        <label for="toggleMainNav" class="menu-overlay"></label>
 
-      <div class="main-nav-holder">
-        <ul class="main-nav">
-          <li class="close-nav">
-            <label for="toggleMainNav"></label>
-          </li>
-          <li><a href="/lessons.html">الدروس</a></li>
-          <li><a href="/lectures.html">المحاضرات</a></li>
+        <div class="main-nav-holder">
+          <ul class="main-nav">
+            <li class="close-nav">
+              <label for="toggleMainNav"></label>
+            </li>
+            <li><a href="/lessons.html">الدروس</a></li>
+            <li><a href="/lectures.html">المحاضرات</a></li>
 
-          <li class="has-submenu">
-            <input type="checkbox" id="labelMen" class="check-toggle" />
-            <label for="labelMen">الخطب</label>
+            <li class="has-submenu">
+              <input type="checkbox" id="labelMen" class="check-toggle" />
+              <label for="labelMen">الخطب</label>
 
-            <i class="menu-caret"></i>
-            <ul class="submenu">
-              <li>
-                <a href="/voiceSpeeches.html">الخطب المسموعة</a>
-              </li>
-              <li>
-                <a href="/writtenSpeeches.html">الخطب المكتوبة</a>
-              </li>
-            </ul>
-          </li>
+              <i class="menu-caret"></i>
+              <ul class="submenu">
+                <li>
+                  <a href="/voiceSpeeches.html">الخطب المسموعة</a>
+                </li>
+                <li>
+                  <a href="/writtenSpeeches.html">الخطب المكتوبة</a>
+                </li>
+              </ul>
+            </li>
 
-          <li><a href="/articles.html">المقالات</a></li>
-          <li><a href="/#gallery">مطويات وبطاقات دعوية</a></li>
-          <li><a href="/live.html"> البث المباشر</a></li>
-        </ul>
+            <li><a href="/articles.html">المقالات</a></li>
+            <li><a href="/#gallery">مطويات وبطاقات دعوية</a></li>
+            <li><a href="/live.html"> البث المباشر</a></li>
+          </ul>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="ابحث...." />
+          <i class="bi bi-search icon"></i>
+        </div>
       </div>
     </nav>
 
@@ -184,5 +190,6 @@
         <img src="/images/logo.png" alt="logo" />
       </a>
     </footer>
+    <script src="js/all.js"></script>
   </body>
 </html>
