@@ -421,7 +421,6 @@ nav form button {
   padding: 0 10px;
   border: solid 1px var(--color-primary);
   transition: all 0.3s ease;
-  transform: translateY(-50px);
 
   /* 12-2-2023 */
   display: none;
@@ -431,7 +430,6 @@ nav form button {
 .search-bar input[type="text"].active {
   /* 12-2-2023 */
   display: block;
-  transform: translateY(0);
 }
 
 .search-bar input[type="text"]:focus {
