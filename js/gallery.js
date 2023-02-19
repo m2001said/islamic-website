@@ -100,7 +100,7 @@ for (let i = 0; i < pdfThumbnails.length; i++) {
         await navigator.share({
           title: "موقع الشيخ عبدالله",
           text: "لقد أعجبني هذا الدرس فلعله ينفعكم ",
-          url: pdfUrl,
+          url: window.location.href + pdfUrl,
         });
       } catch {
         console.log("error in sharing");
