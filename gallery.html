@@ -97,8 +97,15 @@
         <a href="/gallery.html">مطويات وبطاقات دعوية</a>
       </div>
     </div>
-    <!-- gallery -->
-    <div class="gallery-container">
+
+    <!-- btns -->
+    <div class="gallery-btns flex">
+      <button class="gallery-btn gallery-btn-1 active">صور</button>
+      <button class="gallery-btn gallery-btn-2">pdf</button>
+    </div>
+
+    <!-- gallery image -->
+    <div class="gallery-container" id="gallery-box-1">
       <div class="gallery-item" data-index="1">
         <img
           src="https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"
@@ -146,6 +153,28 @@
       </div>
     </div>
 
+    <div class="pdf-container" id="gallery-box-2">
+      <a class="gallery-pdf flex-column" href="/assests/2021.pdf">
+        <img src="images/gallery/1.png" />
+        <p>اصبر علي مرضك</p>
+      </a>
+
+      <a class="gallery-pdf flex-column">
+        <img src="images/gallery/2.png" />
+        <p>النية</p>
+      </a>
+
+      <a class="gallery-pdf flex-column">
+        <img src="images/gallery/3.png" />
+        <p>الاستغفار</p>
+      </a>
+    </div>
+    <!-- for javascript when you show the pdf -->
+    <div id="pdf-overlay">
+      <iframe id="pdf-viewer" src=""></iframe>
+      <span id="pdf-close-btn">&times;</span>
+      <button id="pdf-share">مشاركة</button>
+    </div>
     <!-- footer -->
     <footer class="footer flex">
       <h4>جميع الحقوق محفوظة &#169; 2023</h4>
