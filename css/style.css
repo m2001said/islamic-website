@@ -684,13 +684,20 @@ nav form button {
   gap: 1rem;
 }
 
+/* 21-2-2023 */
+.card-share-btn,
 .card-content-info p {
   background: var(--color-secondary-light);
   padding: 5px;
   font-size: 1rem;
   border-radius: 10px;
+  color: var(--color-primary);
+}
+.card-share-btn:hover {
+  background: var(--color-secondary);
 }
 
+/* ----- */
 .card-content .social {
   margin-top: 0;
   gap: 5px;
