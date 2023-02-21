@@ -26,16 +26,21 @@ const lightBoxContent = document.createElement("div");
 const lightBoxImg = document.createElement("img");
 const lightBoxPrev = document.createElement("div");
 const lightBoxNext = document.createElement("div");
+const lightBoxShareBtn = document.createElement("button");
 
 lightBoxContainer.classList.add("lightbox");
 lightBoxContent.classList.add("lightbox-content");
 lightBoxPrev.classList.add("bi", "bi-chevron-double-left", "lightbox-prev");
 lightBoxNext.classList.add("bi", "bi-chevron-double-right", "lightbox-next");
+lightBoxShareBtn.classList.add("lightbox-share-btn");
+
+lightBoxShareBtn.textContent = "مشاركة";
 
 lightBoxContainer.appendChild(lightBoxContent);
 lightBoxContent.appendChild(lightBoxImg);
 lightBoxContent.appendChild(lightBoxPrev);
 lightBoxContent.appendChild(lightBoxNext);
+lightBoxContent.appendChild(lightBoxShareBtn);
 
 document.body.appendChild(lightBoxContainer);
 
@@ -49,11 +54,23 @@ function showLightBox(n) {
   }
   let imageLocation = galleryItem[index - 1].children[0].getAttribute("src");
   lightBoxImg.setAttribute("src", imageLocation);
+
+  // sharing
+  lightBoxShareBtn.addEventListener("click", async () => {
+    try {
+      await navigator.share({
+        title: "موقع الشيخ عبدالله",
+        text: "لقد أعجبني هذا  فلعله ينفعكم ",
+        url: imageLocation,
+      });
+    } catch {
+      console.log("error in sharing");
+    }
+  });
 }
 
 function currentImage() {
   lightBoxContainer.style.display = "block";
-
   let imageIndex = parseInt(this.getAttribute("data-index"));
   showLightBox((index = imageIndex));
 }
@@ -95,6 +112,8 @@ for (let i = 0; i < pdfThumbnails.length; i++) {
     const pdfUrl = pdfThumbnail.getAttribute("href");
     pdfViewer.setAttribute("src", pdfUrl);
     pdfOverlay.style.display = "block";
+
+    // sharing
     pdfShare.addEventListener("click", async () => {
       try {
         await navigator.share({

@@ -398,6 +398,16 @@
 .lightbox-next:hover {
   opacity: 0.8;
 }
+.lightbox-share-btn {
+  position: absolute;
+  background-color: var(--color-primary-light);
+  color: #fff;
+  padding: 7px;
+  bottom: -39px;
+  font-size: 1.3rem;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
 #pdf-overlay {
   position: fixed;
   top: 0;
@@ -485,8 +495,8 @@
     width: 90%;
     margin: 20% auto;
   }
-  .gallery-btns {
-    flex-direction: column;
+  .gallery-btn {
+    width: 100px;
   }
 }
 /**************************/
